@@ -1,0 +1,19 @@
+.container { 
+ 
+ width:1000px;
+ border:1px solid red;
+ height:800px;
+ margin : 0 auto;
+ margin-top: 25px;
+ background-color:#ccccff;
+} 
+
+.inpt, .selc {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

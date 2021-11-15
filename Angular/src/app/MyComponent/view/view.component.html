@@ -1,0 +1,52 @@
+<div style="height: 80vh;">
+<div class="container" >
+ <div class=" row justify-content-center mx-5 my-5" >
+ <div  class="col-12  ">
+          <form  method="get" style="text-align: center;"  (ngSubmit)="onSubmit(); " #showStudent= "ngForm"  >
+               <h5><label for="college">Choose College:  </label></h5>
+            
+                   <select   id="collegeid" name= "collegeid" [(ngModel)]= "collegeid">
+                      <option value="" disabled selected>Choose a College Name</option>
+                           <option *ngFor="let colgid of college"   [value]= "colgid.collegeid"  >{{colgid.name }}</option>
+
+                     </select> 
+            <br><br>
+            <input type="submit" value="Show Details" class="submit">  
+         </form>
+    </div>
+ </div>
+</div>
+
+<div class="container">
+    <div class="row  mx-5 my-5">
+        <div  class="col-12  ">
+
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                    <tr  *ngFor="let std of student">
+                                <th scope="row">   {{std.id }}      </th>
+                               <td>        {{std.name }}       </td>
+                               <td>        {{std.gender }}       </td> 
+                               <td>        {{std.age }}           </td>
+                    </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+
+

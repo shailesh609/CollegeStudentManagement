@@ -1,0 +1,16 @@
+.footer {
+	/* color: #e4e0e0; */
+    background-color: #e3f2fd;
+	text-align:right;
+	/* position: fixed; */
+ 	bottom: 0px;
+ 	right: 0px;
+ 	width: 100%;
+    align-items: center;
+    
+}
+
+a {
+	text-decoration: none !important;
+  }
+  

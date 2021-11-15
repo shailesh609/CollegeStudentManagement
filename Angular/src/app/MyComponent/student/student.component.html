@@ -1,0 +1,53 @@
+<div class="container" >
+    
+<div  class="mx-5 my-5 row  justify-content-center">
+
+    <div class="wrapper" >
+      <h2>Add Student</h2>
+      <form  method="POST"  (ngSubmit)="onSubmit(); addStudent.reset()" #addStudent= "ngForm"  >
+        <div class="form-group">
+          <label for="studentid">Student ID</label>
+          <input type="number" name="studentid" id="studentid" placeholder="Student Id" [(ngModel)] = "studentid" />
+        </div>
+        <div class="form-group">
+          <label for="name">Student Name</label>
+          <input type="text" name="name" id="name" placeholder="Student Name" [(ngModel)] = "studentname" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" placeholder="Student Age" [(ngModel)] = "age" required />
+        </div>
+        <div >
+            <label for="gender" style="display: block;
+            margin: 2rem 0 0.5rem 0;">Gender</label>
+            <div>
+                <label for="male"  >Male</label>&nbsp;&nbsp;
+                <input type="radio"  name="gender" id="male" value="male" [(ngModel)] = "gender" required>   
+                &nbsp;&nbsp;&nbsp;
+                <label for="female"  >Female</label>&nbsp;&nbsp;
+                <input type="radio"  name="gender" id="female" value="female" [(ngModel)] = "gender" required>  
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="collegeid">College ID</label>
+            <select   id="collegeid" name= "collegeid" [(ngModel)]= "collegeid">
+              <option value="" disabled selected>Choose a College Name</option>
+              <option *ngFor="let colgid of college"   [value]= "colgid.collegeid"  >{{colgid.name }}</option>
+
+           </select> 
+            <!-- <input type="number" name="collegeid" id="collegeid" placeholder="College Id" [(ngModel)] = "collegeid" /> -->
+          </div>
+          
+        <div class="form-group">
+          <button type="submit" class="submit">Save Student</button>
+        </div>
+      </form>
+      
+    </div>
+</div>
+   </div>
+
+
+
+
